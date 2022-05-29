@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.rendererType": "canvas",
+    "editor.fontFamily": "Source Han Code JP",
+    "editor.fontSize": 12,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim"
+}
