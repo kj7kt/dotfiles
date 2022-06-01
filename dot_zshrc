@@ -98,11 +98,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-##################################################################################################
-# User configuration                                                                             #
-##################################################################################################
+# # # # # # # # # FUNCTIONAL MODIFICATION SCRIPT # # # # # # # # # # #                                                
+#
 # source ~/anaconda3/etc/profile.d/conda.sh
-
+#
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -110,18 +109,18 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# vi mode
+############################### vi mode ############################################################################
 bindkey -v
 export KEYTIMEOUT=1
 
-# Use vim keys in tab complete menu:
+############################### Use vim keys in tab complete menu ##################################################
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# Change cursor shape for different vi modes.
+############################### Change cursor shape for different vi modes. ########################################
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -142,7 +141,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
+############################## Use lf to switch directories and bind it to ctrl-o ################################### 
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -154,14 +153,14 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-# Alacritty kde blur: Uncomment to enable blur on Alacritty. Not compatible with wayland session
+########## Alacritty kde blur: Uncomment to enable blur on Alacritty. Not compatible with wayland session ############
 
 # if [[ $(ps --no-header -p $PPID -o comm) =~ '^alacritty$' ]]; then
 #         for wid in $(xdotool search --pid $PPID); do
 #             xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
 # fi
 # 
-#############################################################################################
+######################################################################################################################
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -185,16 +184,16 @@ bindkey -s '^o' 'lfcd\n'
 # For a full list of active aliases, run `alias`.                       #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
-############################## arch #####################################
+############################## arch ####################################################################################
 # alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # alias nearest-server="sudo reflector -c Japan -a 6 --sort rate --save /etc/pacman.d/mirrorlist"
 # alias pm='sudo pacman -S'
 #
-############################# common ####################################
+############################# common ###################################################################################
 alias clr=clear     
 alias check-journals="sudo journalctl -p 3 -xb"
 #
-############################# Example ###################################
+############################# Example ##################################################################################
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
