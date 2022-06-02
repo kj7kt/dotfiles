@@ -19,6 +19,9 @@ fi
 ############## doom emacs #########################################################################################
 # export PATH="$HOME/.emacs.d/bin:$PATH"
 #
+# # # # # # # # # # ENVIRONMENT VARIABLES # # # # # # # # # # #
+# export EDITOR=nvim
+#
 # # # # # # # # # oh-my-zsh configs # # # # # # # # # # # # # #
 #
 # Set name of the theme to load --- if set to "random", it will
