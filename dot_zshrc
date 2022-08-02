@@ -21,7 +21,7 @@ fi
 #
 ############## other path #########################################################################################
 # source "$HOME/.rvm/scripts/rvm" #rvm
-# 
+# export PATH="$HOME/.rbenv/bin:$PATH" #rbenv 
 # # # # # # # # # # ENVIRONMENT VARIABLES # # # # # # # # # # #
 # export EDITOR=nvim
 #
