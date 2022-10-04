@@ -195,6 +195,9 @@ bindkey -s '^o' 'lfcd\n'
 # alias nearest-server="sudo reflector -c Japan -a 6 --sort rate --save /etc/pacman.d/mirrorlist"
 # alias pm='sudo pacman -S'
 #
+############################# fedora ###################################################################################
+# alias grub-update="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
+#
 ############################# common ###################################################################################
 alias clr=clear     
 alias check-journals="sudo journalctl -p 3 -xb"
